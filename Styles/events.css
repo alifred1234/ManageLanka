@@ -1,0 +1,26 @@
+#content{
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cbcbcb;
+    margin-top: 10%;
+}
+
+.newform{
+    width: fit-content;
+    margin: auto;
+}
+ 
+#display-image{
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    margin: 10%;
+    display: flex;
+}
+img{
+    margin: 5px;
+    width: 850px;
+    height: 350px;
+}

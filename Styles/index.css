@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #363333;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    color: azure;
+}
+
+/* header-styling for all pages*/
+#header {
+    top: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1500;
+    max-height: 6vh;
+}
+
+/* navigation-styling for all pages*/
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#logo-text {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 1.5s;
+}
+
+#logo-text:hover {
+    color:rgba(16, 189, 39, 0.521);
+    transition: 0.7s;
+}
+
+.nav-list {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.nav-link:hover {
+    color: rgb(67, 68, 78);
+    padding: 3px 10px;
+    transition: 0.6s;
+}
+
+.btn-grouped {
+    color: black;
+    background-color: #10bd27;
+    border: none;
+    border-radius: 30px;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+}
+
+.btn-grouped:hover {
+    background-color: #10bd2772;
+    color: white;
+}
+
+.special{
+    padding: 10px 40px;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* content styling */
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "app-text app-picture";
+    width: 100%;
+    top: 6vh;
+    color: #fff;
+}
+
+.app-text {
+    grid-area: app-text;
+    width: 90%;
+    float: left;
+    padding-top: 15%;
+    padding-left: 15%;
+}
+
+.app-text h3 {
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.app-text h1 {
+    font-size: 65px;
+    position: relative;
+    margin-top: 30px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.app-text p {
+    font-size: 19px;
+    margin: 30px 30px 30px 0;
+    letter-spacing: 1px;
+}
+
+.app-picture {
+    grid-area: app-picture;
+    padding-top: 15%;
+    padding-right: 5%;
+    width: 90%;
+}
+
+.app-picture img {
+    width: 100%;
+    height: auto;
+}
+
+
+.btn-grouped .play-btn {
+    margin-left: 40px;
+    display: inline-flex;
+}
+
+.btn-grouped span {
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    margin: auto 20px;
+    cursor: pointer;
+}
+
+
+.play-btn-inner i {
+    padding: 15px 19px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.about-services {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 0 300px;
+}
+
+.about-services ul {
+    display: inline-flex;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.about-services ul li {
+    margin: 0 50px;
+    cursor: pointer;
+}
+
+.about-services ul li img {
+    width: 200px;
+    height: auto;
+}
+
+.about-services ul li h1 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.about-services ul li p {
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
