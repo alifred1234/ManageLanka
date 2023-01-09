@@ -134,7 +134,7 @@
 
                         <div id="fields">
 
-                            <!-- MCR + citizen -->
+                            <!-- MCR + citizen + recycler-->
                         
                             <div class="input_field select_option hidden" id="district">
                                 <select name="district">
@@ -171,6 +171,12 @@
                             <div class="input_field hidden" id="company"> <span><i aria-hidden="true"
                                         class="fa fa-building"></i></span>
                                 <input type="text" name="company" placeholder="Company Name" />
+                            </div>
+
+                            <!--restaurant + retailer + MCR + volunteer group -->
+                            <div class="input_field hidden" id="contact-number">
+                                <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                                <input type="text" name="contact" placeholder="Contact Number" />
                             </div>
 
                             <!-- recycling company + restaurant + retailer -->

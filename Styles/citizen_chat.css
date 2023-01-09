@@ -1,0 +1,167 @@
+.chat {
+    max-width: 30vw;
+    width: 30vw;
+    height: 75%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 10px;
+
+}
+
+.header-chat {
+    text-align: right;
+    padding: 1rem;
+    font-family:'Montserrat', sans-serif;
+    font-size: 12pt;
+    height: 3.5rem;
+    background-color:darkseagreen !important;
+    color: #0c4128;
+    border-radius: 10px;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.header-chat p{
+    color: inherit;
+    background-color: inherit;
+}
+.chat .messages-chat {
+    border-left: 2px solid seagreen;
+    border-right: 2px solid seagreen;
+    padding: 15px 15px;
+    overflow-y: scroll; overflow-x: hidden;
+    height: 76%;
+    scroll-behavior: smooth;
+}
+.chat input:focus{
+    outline: none;
+}
+
+.chat .messages-chat .message {
+    display:flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.chat .messages-chat .text {
+    margin: 0px;
+    color: #1a1e21;
+    background-color: #f6f6f6;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.text-only {
+    margin-left: 45px;
+}
+
+.time {
+    font-size: 10px;
+    color:lightgrey;
+    margin-bottom:10px;
+    margin-left: 0;
+}
+
+.response-time {
+    float: right;
+}
+
+.response {
+    float: right;
+    margin-right: 0px !important;
+    margin-left:auto; /* flexbox alignment rule */
+}
+
+.response .text {
+    background-color: #e3effd !important;
+}
+
+.footer-chat {
+    width:100%;
+    height: 75px;
+    display:flex;
+    align-items: center;
+    position:absolute;
+    bottom: 0;
+    background-color: transparent;
+    border-top: 2px solid #EEE;
+    border-bottom: 2px solid seagreen;
+    border-left: 2px solid seagreen;
+    border-right: 2px solid seagreen;
+}
+
+.chat .footer-chat .send {
+    color:#fff;
+    background-color: darkseagreen;
+    position: absolute;
+    right: 2%;
+    padding: 12px 12px 12px 12px;
+    border-radius: 50px;
+    font-size: 14pt;
+}
+
+.chat .footer-chat .right {
+    position: absolute;
+    right: 40px;
+}
+
+.write-message {
+    border:none !important;
+    width:80%;
+    height: 2rem;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.footer-chat *::-webkit-input-placeholder {
+    color: #C0C0C0;
+    font-size: 13pt;
+}
+.footer-chat input *:-moz-placeholder {
+    color: #C0C0C0;
+    font-size: 13pt;
+}
+.footer-chat input *::-moz-placeholder {
+    color: #C0C0C0;
+    font-size: 13pt;
+    margin-left:5px;
+}
+.footer-chat input *:-ms-input-placeholder {
+    color: #C0C0C0;
+    font-size: 13pt;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/*Scroll bar*/
+/* width */
+.messages-chat::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.messages-chat::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.messages-chat::-webkit-scrollbar-thumb {
+    background: darkseagreen;
+}
+
+/* Handle on hover */
+.messages-chat::-webkit-scrollbar-thumb:hover {
+    background: darkgreen;
+}
+.collapsed{
+    height: 3.5rem !important;
+}
+.collapsed .messages-chat, .collapsed .footer-chat {
+    display: none;
+}
+
+.collapsible{
+    cursor: pointer;
+}

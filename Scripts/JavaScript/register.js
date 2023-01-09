@@ -3,6 +3,7 @@ const district = document.getElementById("district");
 const NID = document.getElementById("NID");
 const repID = document.getElementById("repID");
 const company = document.getElementById("company");
+const contactNumber = document.getElementById("contact-number");
 const businessID = document.getElementById("businessID");
 const adminID = document.getElementById("adminID")
 const group = document.getElementById("group");
@@ -12,56 +13,61 @@ const radio2 = document.getElementById("business");
 const radio3 = document.getElementById("admin");
 
 
+// show element
+function show(element) {
+    element.classList.remove("hidden");
+    element.classList.add("show");
+}
+function hide(element) {
+    element.classList.remove("show");
+    element.classList.add("hidden");
+}
 
 function change() {
-    NID.classList.remove("show");
-    NID.classList.add("hidden");
-    district.classList.remove("show");
-    district.classList.add("hidden");
-    repID.classList.remove("show");
-    repID.classList.add("hidden");
-    businessID.classList.remove("show");
-    businessID.classList.add("hidden");
-    company.classList.remove("show");
-    company.classList.add("hidden");
-    group.classList.remove("show");
-    group.classList.add("hidden");
-    adminID.classList.remove("show");
-    adminID.classList.add("hidden");
+    hide(NID);
+    hide(district);
+    hide(repID);
+    hide(businessID);
+    hide(company);
+    hide(contactNumber);
+    hide(group);
+    hide(adminID);
 
 
     switch (usertype.value) {
         case "citizen":
-            NID.classList.remove("hidden");
-            NID.classList.add("show");
-            district.classList.remove("hidden");
-            district.classList.add("show");
+            show(NID);
+            show(district);
             break;
 
         case "municipal":
-            district.classList.remove("hidden");
-            district.classList.add("show");
-            repID.classList.remove("hidden");
-            repID.classList.add("show");
+            show(district);
+            show(repID);
+            show(contactNumber);
             break;
 
         case "recycler":
         case "restaurant":
         case "retailer":
-            businessID.classList.remove("hidden");
-            businessID.classList.add("show");
-            company.classList.remove("hidden");
-            company.classList.add("show");
+            show(businessID);
+            show(company);
+            if(usertype.value !== "recycler"){
+                show(contactNumber);
+            }
+            if(usertype.value == "recycler"){
+                show(district);
+            }
+            
             break;
 
         case "admin":
-            adminID.classList.remove("hidden");
-            adminID.classList.add("show");
+            show(adminID);
             break;
 
         case "volunteer":
-            group.classList.remove("hidden");
-            group.classList.add("show");
+            show(group);
+            show(contactNumber);
+            break;
     }
 }
 
@@ -82,6 +88,8 @@ function radio() {
     businessID.classList.add("hidden");
     company.classList.remove("show");
     company.classList.add("hidden");
+    contactNumber.classList.remove("show")
+    contactNumber.classList.add("hidden")
     group.classList.remove("show");
     group.classList.add("hidden");
     adminID.classList.remove("show");

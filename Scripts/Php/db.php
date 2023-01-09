@@ -10,7 +10,7 @@
 $servername = "localhost";
 $dbusername = "root";
 $pass = "";
-$database = "registration";
+$database = "managelanka";
 
 // create connection
 $conn = mysqli_connect($servername, $dbusername, $pass, $database);
