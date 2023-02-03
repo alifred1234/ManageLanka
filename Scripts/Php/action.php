@@ -15,7 +15,7 @@ $end = mysqli_real_escape_string($conn, $input["end"]);
 $driver = mysqli_real_escape_string($conn, $input["driver"]);
 $truck = mysqli_real_escape_string($conn, $input["truck"]);
 
-if ($input["action"] === 'edit') {
+if ($input["action"] === 'edit' && $day != "" && $start != "" && $end != "" && $driver != "" && $truck != "" ) {
 
     if ($_SESSION['district'] == "1") {
         $query = "UPDATE district1 SET day = '" . $day . "', start = '" . $start . "', end = '" . $end . "', driver = '" . $driver . "', truck = '" . $truck . "' WHERE area = '" . $input["area"] . "'";

@@ -63,8 +63,7 @@ session_start();
                 <p>We offer a few features that may assist in Garbage management.
                     Firstly, we have district based schedules that are updated by the council themselves. We also aid in
                     the process of connecting recycling companies and the Municipal council through advertisements set
-                    to
-                    decrease that chance of recyclable waste reaching the landfills.
+                    to decrease that chance of recyclable waste reaching the landfills.
                 </p>
             </li>
             <li>
@@ -78,9 +77,13 @@ session_start();
         </ul>
     </div>
     <?php
-        if($_SESSION['role'] == 'citizen' || $_SESSION['role'] == 'recycler'){
-            include 'citizen_chat.php';
+        
+        if (isset($_SESSION['username'])){
+            if($_SESSION['role'] == 'citizen' || $_SESSION['role'] == 'recycler'){
+                include 'citizen_chat.php';
+            }
         }
+        
 ?>
 </body>
 
